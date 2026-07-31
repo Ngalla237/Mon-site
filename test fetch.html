@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test Fetch</title>
+</head>
+<body>
+
+<h1>Ouvre la console pour voir les résultats</h1>
+
+<script>
+  async function recupererBlague() {
+    console.log("Récupération en cours...");
+    let reponse = await fetch("https://official-joke-api.appspot.com/random_joke");
+    let blague = await reponse.json();
+    console.log(blague.setup);
+    console.log(blague.punchline);
+  }
+
+  recupererBlague();
+</script>
+
+</body>
+</html>

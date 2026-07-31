@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test Objets</title>
+</head>
+<body>
+
+<h1>Ouvre la console pour voir les résultats</h1>
+
+<script>
+  let personne = {
+    nom: "Alex",
+    age: 25,
+    ville: "Paris",
+    saluer: function() {
+      console.log("Bonjour, je m'appelle " + this.nom);
+    }
+  };
+
+  console.log("Nom : " + personne.nom);
+  console.log("Age : " + personne["age"]);
+
+  personne.age = 26;
+  console.log("Nouvel âge : " + personne.age);
+
+  personne.profession = "Développeur";
+  console.log("Profession : " + personne.profession);
+
+  personne.saluer();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test Fonctions Fléchées</title>
+</head>
+<body>
+
+<h1>Ouvre la console pour voir les résultats</h1>
+
+<script>
+  // Fonction classique
+  function additionClassique(a, b) {
+    return a + b;
+  }
+  console.log("Classique : " + additionClassique(3, 4));
+
+  // Fonction fléchée équivalente
+  const additionFlechee = (a, b) => {
+    return a + b;
+  };
+  console.log("Fléchée : " + additionFlechee(3, 4));
+
+  // Version courte (une seule ligne)
+  const additionCourte = (a, b) => a + b;
+  console.log("Courte : " + additionCourte(3, 4));
+
+  // Comparaison avec map, en classique puis en fléchée
+  let nombres = [1, 2, 3, 4];
+
+  let doublesClassique = nombres.map(function(n) {
+    return n * 2;
+  });
+  console.log("Map classique : " + doublesClassique);
+
+  let doublesFleches = nombres.map(n => n * 2);
+  console.log("Map fléchée : " + doublesFleches);
+</script>
+
+</body>
+</html>

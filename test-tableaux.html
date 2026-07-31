@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test Tableaux</title>
+</head>
+<body>
+
+<h1>Ouvre la console pour voir les résultats</h1>
+
+<script>
+  let fruits = ["pomme", "banane", "orange"];
+  let nombres = [1, 2, 3, 4, 5, 6];
+
+  // forEach : affiche chaque fruit
+  console.log("--- forEach ---");
+  fruits.forEach(function(fruit) {
+    console.log(fruit);
+  });
+
+  // map : double chaque nombre
+  console.log("--- map ---");
+  let doubles = nombres.map(function(n) {
+    return n * 2;
+  });
+  console.log(doubles);
+
+  // filter : garde seulement les nombres pairs
+  console.log("--- filter ---");
+  let pairs = nombres.filter(function(n) {
+    return n % 2 === 0;
+  });
+  console.log(pairs);
+</script>
+
+</body>
+</html>
