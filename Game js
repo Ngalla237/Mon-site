@@ -1,0 +1,24 @@
+function genererMotDePasse() {
+  let longueur = document.getElementById("longueur").value;
+  let inclureSymboles = document.getElementById("symboles").checked;
+  
+  let caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  if (inclureSymboles) {
+    caracteres += "!@#$";
+  }
+  
+  let motDePasse = "";
+  for (let i = 0; i < longueur; i++) {
+    let index = Math.floor(Math.random() * caracteres.length);
+    motDePasse += caracteres[index];
+  }
+  
+  document.getElementById("resultat").textContent = motDePasse;
+}
+
+document.getElementById("btnCopier").addEventListener("click", function() {
+  let texte = document.getElementById("resultat").textContent;
+  navigator.clipboard.writeText(texte)
+    .then(() => alert("Mot de passe copié !"))
+    .catch(() => alert("Erreur lors de la copie"));
+});
