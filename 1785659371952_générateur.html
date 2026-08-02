@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Générateur de mot de passe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body><nav class="menu">
+  <a href="index.html">Accueil</a>
+  <a href="apropos.html">À propos</a>
+  <a href="projets.html">Projets</a>
+  <a href="generateur.html">Générateur</a>
+  <a href="blagues.html">Blagues</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="conteneur">
+  <h1>Générateur de mot de passe</h1>
+
+  <label>Longueur : <span id="valeurLongueur">12</span></label><br>
+  <input type="range" id="longueur" min="4" max="30" value="12" oninput="document.getElementById('valeurLongueur').textContent = this.value">
+  <br><br>
+
+  <label><input type="checkbox" id="symboles" checked> Inclure des symboles (!@#$)</label>
+  <br><br>
+
+  <button onclick="genererMotDePasse()">Générer</button>
+  <p id="resultat"></p>
+  <button id="btnCopier">Copier</button>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
